@@ -3,9 +3,11 @@
 #+ mime: text/turtle
 #+ tags:
 #+   - RDF dump
+#+ defaults:
+#+   - type: mid:Track
 
 PREFIX mid: <http://example.org/midi/>
 
-SELECT ?track WHERE {
-    ?track a mid:Track .
+SELECT ?s WHERE {
+    ?s a ?_type_iri .
 }
