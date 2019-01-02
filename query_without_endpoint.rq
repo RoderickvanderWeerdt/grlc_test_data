@@ -1,0 +1,9 @@
+#+ summary: Testing without endpoint
+#+ tags:
+#+   - dbpedia
+#+ method: GET
+#+ pagination: 50
+#+ defaults:
+#+   - type: http://dbpedia.org/ontology/Band
+
+select distinct ?s where {?s a ?_type_iri} LIMIT 20
