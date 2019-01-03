@@ -2,6 +2,9 @@
 #+ endpoint: http://dbpedia.org/sparql
 #+ tags:
 #+   - bands
+#+ defaults:
+#+   - type: http://dbpedia.org/ontology/Band
+#+   - genre: http://dbpedia.org/resource/Grunge
 
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -11,7 +14,8 @@ PREFIX dbr: <http://dbpedia.org/resource/>
 
 SELECT ?band WHERE {
   ?band a ?_type_iri .
+  ?band dbo:genre ?__genre_iri .
   ?band dbo:activeYearsStartYear ?_year_xsd_date .
-  ?band dbp:nominations ?__noms_integer .
+
 } 
 LIMIT 30
