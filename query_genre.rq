@@ -10,7 +10,7 @@ PREFIX dbp: <http://dbpedia.org/property/>
 
 SELECT ?band WHERE {
   ?band a ?_type_iri .
-  ?band dbo:genre ?__genre_iri .
+  ?band dbo:genre ?_name_prefix_dbo .
   ?band dbp:nominations ?_noms_integer .
 } 
 LIMIT 30
