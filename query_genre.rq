@@ -11,7 +11,7 @@ PREFIX dbr: <http://dbpedia.org/resource/>
 
 SELECT ?band WHERE {
   ?band a ?_type_iri .
-  ?band dbo:genre ?_name_prefix_dbr .
-  ?band dbp:nominations ?_noms_integer .
+  ?band dbo:activeYearsStartYear ?_year_xsd_date .
+  ?band dbp:nominations ?__noms_integer .
 } 
 LIMIT 30
