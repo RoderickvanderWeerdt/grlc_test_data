@@ -7,10 +7,11 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX dbo: <http://dbpedia.org/ontology/>
 PREFIX dbp: <http://dbpedia.org/property/>
+PREFIX dbr: <http://dbpedia.org/resource/>
 
 SELECT ?band WHERE {
   ?band a ?_type_iri .
-  ?band dbo:genre ?_name_prefix_dbo .
+  ?band dbo:genre ?_name_prefix_dbr .
   ?band dbp:nominations ?_noms_integer .
 } 
 LIMIT 30
