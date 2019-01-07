@@ -15,7 +15,7 @@ PREFIX dbr: <http://dbpedia.org/resource/>
 SELECT ?band WHERE {
   ?band a ?_type_iri .
   ?band dbo:genre ?__genre_iri .
-  ?band dbo:activeYearsStartYear ?_year_xsd_date .
+  ?band dbo:activeYearsStartYear ?_year_xsd_gYear .
 
 } 
 LIMIT 30
