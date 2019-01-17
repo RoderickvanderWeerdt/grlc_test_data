@@ -1,7 +1,6 @@
-#+ summary: Returns all triples in a page with embedded RDFa (without endpoint)
-#+ mime: rdfa
+#+ summary: How much does the query return without a limit?, let's find out!
 #+ tags:
-#+   - RDFa
+#+   - without
 
 SELECT * WHERE {
     ?s ?p ?o .
