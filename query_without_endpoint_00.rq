@@ -1,0 +1,8 @@
+#+ summary: Returns all triples in a page with embedded RDFa (without endpoint)
+#+ mime: rdfa
+#+ tags:
+#+   - RDFa
+
+SELECT * WHERE {
+    ?s ?p ?o .
+} LIMIT 20
