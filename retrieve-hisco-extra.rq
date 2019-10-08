@@ -4,7 +4,7 @@
 #+   - occupationalCoding
 #+ defaults:
 #+   - name: advocaat
-#+   - lang: nl
+#+   - language: nl
 
 PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX schema: <http://schema.org/>
@@ -15,7 +15,7 @@ SELECT ?names ?code WHERE {
   ?s schema:occupationalCategory ?category .
   ?category schema:codeValue ?code .
   ?s schema:name ?names .
-  FILTER(LANG(?names) = ?_lang) . # filter on a given language, like "es", "nl", "se"
+  FILTER(LANG(?names) = ?_language) . # filter on a given language, like "es", "nl", "se"
   FILTER regex(?names, ?_name, "i")
 } 
 ORDER BY ASC(?names)
