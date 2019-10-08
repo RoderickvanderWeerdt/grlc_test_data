@@ -17,4 +17,3 @@ SELECT ?names ?code WHERE {
   FILTER regex(?names, ?_name, "i") .
 } 
 ORDER BY ASC(?names)
-LIMIT 1
