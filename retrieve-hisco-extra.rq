@@ -4,7 +4,6 @@
 #+   - occupationalCoding
 #+ defaults:
 #+   - name: advocaat
-#+   - lan: nl
 
 PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX schema: <http://schema.org/>
@@ -15,7 +14,6 @@ SELECT ?names ?code WHERE {
   ?s schema:occupationalCategory ?category .
   ?category schema:codeValue ?code .
   ?s schema:name ?names .
-  FILTER(LANG(?names) = ?_lan ) .
   FILTER regex(?names, ?_name, "i") .
 } 
 ORDER BY ASC(?names)
