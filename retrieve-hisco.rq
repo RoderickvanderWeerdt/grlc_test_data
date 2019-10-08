@@ -1,0 +1,19 @@
+#+ summary: retrieve HISCO for given language
+#+ endpoint: https://druid.datalegend.net/IISG/HISCO/sparql/HISCO
+#+ tags:
+#+   - occupationalCoding
+#+ defaults:
+#+   - name: advocaat 
+
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX schema: <http://schema.org/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX hisco-code: <https://iisg.amsterdam/resource/hisco/code/hisco/>
+SELECT ?_name_nl ?code WHERE {
+  ?s schema:occupationalCategory ?category .
+  ?category schema:codeValue ?code .
+  ?s schema:name ?_name_nl .
+  } 
+ORDER BY ASC(?_name_nl)
+LIMIT 1 #NB: there may be multiple correct and more correct alternatives!
