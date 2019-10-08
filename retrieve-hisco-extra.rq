@@ -16,7 +16,7 @@ SELECT ?names ?code WHERE {
   ?category schema:codeValue ?code .
   ?s schema:name ?names .
   FILTER(LANG(?names) = ?_lan ) .
-  FILTER regex(?names, ?_name, "i")
+  FILTER regex(?names, ?_name, "i") .
 } 
 ORDER BY ASC(?names)
 LIMIT 1
