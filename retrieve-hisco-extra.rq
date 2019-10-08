@@ -14,7 +14,6 @@ SELECT ?_name WHERE {
   ?s schema:occupationalCategory ?category .
   ?category schema:codeValue ?code .
   ?s schema:name ?names .
-  FILTER(lang(?name) = "nl") . # filter on a given language, like "es", "nl", "se"
   FILTER regex(?names, ?_name, "i")
 } 
 ORDER BY ASC(?name)
